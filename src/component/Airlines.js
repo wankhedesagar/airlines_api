@@ -10,7 +10,7 @@ function Airlines() {
     $.ajax({
       method: "GET",
       url: "https://api.api-ninjas.com/v1/airlines?name=" + name,
-      headers:" your api key",
+      headers:" your_api_key",
       contentType: "application/json",
       success: function (result) {
         console.log(result);
