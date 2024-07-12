@@ -1,0 +1,15 @@
+#sppiner {
+  height: 30px;
+  width: 30px;
+  border: 7px solid;
+  border-radius: 50%;
+  border-color: red black black black;
+  animation: rotate 1.5s linear infinite;
+  margin-top: 5px;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(365deg);
+  }
+}
