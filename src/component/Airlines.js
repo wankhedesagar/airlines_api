@@ -31,6 +31,11 @@ function Airlines() {
                 <p className="">icao: {items.icao}</p>
                 <p className="">name: {items.name}</p>
               </div>
+              <div className="logo">
+                <a href={items.logo_url} target="_blank">
+                  <img src={items.logo_url} className="" alt="logo" />
+                </a>
+              </div>
             </div>
           );
         })}
