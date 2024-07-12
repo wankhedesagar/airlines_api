@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from "react";
+import Sppiner from './Sppiner'
 
 function Airlines() {
   const [data, setData] = useState([]);
+  const [loading,setLoading] = useState(false)
 
   useEffect(() => {
     var name = "Air";
     $.ajax({
       method: "GET",
       url: "https://api.api-ninjas.com/v1/airlines?name=" + name,
-      headers: "your api key",
+      headers:" your api key",
       contentType: "application/json",
       success: function (result) {
         console.log(result);
+        setLoading(true)
         setData(result);
       },
       error: function ajaxError(jqXHR) {
         console.error("Error: ", jqXHR.responseText);
+        setLoading(false)
       },
     });
   }, []);
@@ -23,6 +27,7 @@ function Airlines() {
   return (
     <React.Fragment>
       <div className="container">
+        {!loading && <Sppiner/>}
         {data.map((items, id) => {
           return (
             <div key={id} className="card">
