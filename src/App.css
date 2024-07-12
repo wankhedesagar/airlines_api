@@ -33,3 +33,10 @@
 p {
   font-size: 20px;
 }
+
+.logo {
+  display: inline;
+  padding: 30px 10px;
+  position: relative;
+  top: 40px;
+}
