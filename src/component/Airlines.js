@@ -22,9 +22,20 @@ function Airlines() {
 
   return (
     <React.Fragment>
-    <div className="container">
+      <div className="container">
+        {data.map((items, id) => {
+          return (
+            <div key={id} className="card">
+              <div className="card-content">
+                <h5 className="">iata: {items.iata}</h5>
+                <p className="">icao: {items.icao}</p>
+                <p className="">name: {items.name}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
-         </React.Fragment>
+    </React.Fragment>
   );
 }
 
