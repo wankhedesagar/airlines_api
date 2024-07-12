@@ -11,13 +11,11 @@ function Airlines() {
       headers: "your api key",
       contentType: "application/json",
       success: function (result) {
-        setLoading(true);
         console.log(result);
         setData(result);
       },
       error: function ajaxError(jqXHR) {
         console.error("Error: ", jqXHR.responseText);
-        setLoading(false);
       },
     });
   }, []);
